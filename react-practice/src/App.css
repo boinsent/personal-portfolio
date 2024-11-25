@@ -1,0 +1,392 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@300&family=Poppins:wght@100;200;300;400;500;600;800&display=swap');
+
+/* Variables */
+:root{
+    --main-color: #FCF2E6;
+    --text-color: #596B85;
+}
+
+body{
+    background-color: var(--main-color);
+    height: auto;
+    font-family: "Montserrat", sans-serif;
+    color: var(--text-color);
+    letter-spacing: 1px;
+}
+ul{
+    list-style-type: none;
+}
+
+.side-nav{
+    margin: 5px;
+}
+
+.list-group{
+    width: 100px;
+}
+
+/* Profile-body.tsx */
+.container{
+    margin-top: 5%;
+    left: 50%;
+    width: 80%;
+    height: auto;
+    transform: translate(-50%);
+    position: absolute;
+    /* delete ko to latur */
+    border: none;
+    padding: 0;
+    display: flex;
+    padding-bottom: 100px;
+}
+
+.container .container-left{
+    width: 50%;
+    height: 100%;
+    left: 0;
+    /* delete ko to latur */
+    border: none;
+}
+
+.container .container-right{
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    /* delete ko to latur */
+    border: none;
+}
+.centered-items{
+    text-align: center;
+}
+.my-name{
+    font-size: 28px;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-thickness: 1.5px;
+}
+.container .container-left .talent{
+    margin-top: 10px;
+}
+.viewMore{
+    left: 50%;
+    position: relative;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    cursor: pointer;
+}
+/* my-picture.tsx */
+.my-image{
+    width: 205px;
+    height: 205px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 0 var(--text-color);
+}
+.coverPicture{
+    width: 380px;
+    height: 460px;
+    border-radius: 50px 50px 20px 150px;
+}
+
+/* lines.tsx */
+.horizontal{
+    width: 100px;
+    border: 500px solid var(--text-color);
+}
+
+/* background.tsx */
+a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+a:hover{
+    font-weight: bold;
+    color: var(--text-color);
+}
+.backgroundText{
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+}
+.backgroundText::after {
+    content: '';
+    position: absolute;
+    left: 50px;
+    bottom: -5px; 
+    width: 80%; 
+    height: 2px; 
+    background-color: var(--text-color); 
+}
+.star{
+    width: 30px;
+    /* height: 30px; */
+    margin: 0 10px 0 10px;
+}
+.infoContainer{
+    margin-left: 50px;
+}
+.pBold{
+    font-weight: bold;
+}
+.backgroundContainer{
+    margin-left: 25px;
+}
+.hello{
+    font-weight: bold;
+    font-size: 40px;
+}
+.paddingTop{
+    padding-top: 45px;
+}
+.infoRight{
+    margin-right: 75px;
+    direction: rtl;
+}
+.separator{
+    margin-left: -10px;
+}
+.backgroundContainer .lineSeparator{
+    position: relative;
+    top: -16px;
+    margin-left: 40px;
+    width: 81.5%;
+    height: 0;
+    border-top: 2px solid var(--text-color);
+}
+.contactContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 10px 50px 20px;
+}
+  
+.contactLeft,
+.contactRight {
+    flex: 1;
+    padding: 0 10px;
+}
+  
+.contactItem {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+}
+  
+.contactItem .icon {
+    margin-right: 10px;
+}
+  
+.icons {
+    display: inline-flex;
+    align-items: center;
+}
+.workContainer{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 10px 20px 20px;
+}
+.workLeft{
+    margin-top: 20px;
+    width: 20%;
+    align-items: center;
+    text-align: center;
+    border-right: 2px solid var(--text-color);
+}
+.workRight{
+    width: 80%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.titleRight{
+    margin-left: 20px;
+}
+.buttons{
+    top: 20%;
+    left: 7%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.buttons button{
+    background-color: var(--text-color);
+    color: var(--main-color);
+    border: none;
+    padding: 10px;
+    border-radius: 5px 50px 50px 5px;
+    width: 150px;
+    transition: background-color 0.3s, color 0.3s, border 0.5s;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5); 
+}
+button:hover{
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+.quote {
+    position: absolute;
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    text-align: center;
+    padding: 10px;
+}
+.quoteitallic{
+    font-style: italic;
+}
+/* For main code App.tsx */
+.cover {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: white;
+    font-size: 2em;
+    z-index: 1000;
+  }
+  .containerInside{
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    width: 1044px;
+    height: 744px;
+    transform: translate(-50%, -50%);
+    background-color: var(--text-color);
+    border-radius: 10px;
+
+  }
+  .profileContainer{
+    margin-top: 0;
+    height: 50px;
+    width: 50px;
+  }
+  .squareWithIMG{
+    position: absolute;
+    left: 4%;
+    top: 23%;
+  }
+  .squareNoIMG{
+    position: relative;
+    left: 32%;
+    top: 64%;
+  }
+  /* three-square.tsx */
+  .squareImage{
+    width: 100px;
+    height: 125px;
+  }
+  .aboutMe{
+    font-size: 13px;
+    margin-left: 38%;
+    margin-right: 10px;
+    font-weight: 100;
+    top: 120px;
+    position: absolute;
+  }
+  .knowMeMore{
+    left: 37%;
+    position: absolute;
+  }
+  .knowMeMore button {
+    padding: 10px;
+    border: none;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    font-weight: bold;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s, border-color 0.3s;
+  }
+  
+  .knowMeMore button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--text-color); 
+    transition: left 0.5s ease-in-out;
+  }
+  
+  .knowMeMore button:hover::before {
+    left: 100%;
+  }
+  
+  .knowMeMore button:hover {
+    color: var(--text-color);
+    border: 1px solid var(--main-color);
+  }
+  
+  .myName{
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    left: 40%;
+    top: 120%;
+  }
+  .talentBelowName{
+    position: absolute;
+    left: 39%;
+    top: 130%;
+  }
+
+/* loading.tsx */
+
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loading-bar {
+    width: 20%;
+    height: 20px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 20px;
+    border: 1px solid var(--text-color);
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: var(--text-color);
+    border-radius: 10px;
+  }
+  
+  .loading-text {
+    position: absolute;
+    top: 47%;
+    left: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12%;
+  }
+  
+  .loading-title {
+    font-size: 18px;
+    color: var(--text-color);
+    padding-left: 10px;
+  }
+  
+  .loading-percent {
+    font-size: 18px;
+    color: var(--text-color);
+    padding-right: 10px;
+  }
+  
