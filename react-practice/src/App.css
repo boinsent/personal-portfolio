@@ -5,6 +5,8 @@
 :root{
     --main-color: #FCF2E6;
     --text-color: #596B85;
+    --darker-color: #FBEDDC;
+    --whiter-color: #FFFBF6;
 }
 
 body{
@@ -74,6 +76,64 @@ ul{
     text-decoration: underline;
     text-underline-offset: 5px;
     cursor: pointer;
+}
+.activity{
+    width: 60%;
+    height: auto;
+    /* might delete latur */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.upperContainer{
+    background-color: var(--darker-color);
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    justify-items: center;
+    align-items: center;
+    display: grid;
+    padding: 10px 0 10px 0;
+}
+.postContainer{
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-radius: 5px;
+    background-color: var(--whiter-color);
+    align-items: center;
+    display: grid;
+    justify-content: center;
+}
+.postContainer img{
+    border-radius: 5px;
+    height: auto;
+}
+.postContainer p{
+    width: 100%;
+}
+.imageContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+.postContainer button{
+    border-radius: 50px;
+    width: 60px;
+    height: 40px;
+    font-weight: bold;
+    color: var(--main-color);
+    background-color: var(--text-color);
+    border: none;
+    font-size: 16px;
+}
+.dateEdit{
+    display: flex;
+    padding-bottom: 10px;
 }
 /* my-picture.tsx */
 .my-image{
@@ -250,17 +310,34 @@ button:hover{
     font-size: 2em;
     z-index: 1000;
   }
-  .containerInside{
+  @keyframes bookOpenAnimation {
+    0% {
+      width: 0;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+    }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+      width: 1044px;
+      opacity: 1;
+      transform: translate(-50%, -50%); 
+    }
+  }
+  
+  .containerInside {
     left: 50%;
     top: 50%;
     position: absolute;
     width: 1044px;
     height: 744px;
-    transform: translate(-50%, -50%);
     background-color: var(--text-color);
+    opacity: 0;
     border-radius: 10px;
-
+    animation: bookOpenAnimation 1s ease-out forwards;
   }
+
   .profileContainer{
     margin-top: 0;
     height: 50px;
