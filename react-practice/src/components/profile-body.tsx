@@ -63,21 +63,28 @@ function ProfileBody() {
       {isProfileVisible && (
         <div className="activity">
           <div className="upperContainer">
-            <p>I have a different application where I can post my activities here including software projects.</p>
+            <p>
+              This website is not done yet. <br></br> I am still building the
+              application for the functionality of this page.
+            </p>
           </div>
           {/* this section will get data from database. imma put it on for loop latur */}
           <div className="postContainer">
             <div className="dateEdit">
-            <p>DATE CONTAINER</p>
-            <button>Edit</button>
+              <p>DATE CONTAINER</p>
+              <button>Edit</button>
             </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse eu efficitur diam. Quisque interdum in elit non
-              tempus. Proin vulputate neque ac ipsum fringilla pharetra. Aliquam
-              erat volutpat.{" "}
+              I am planning to create an application where I can post my
+              programming and software development activities. This application
+              will function like a blog, allowing me to share any updates or
+              content. This page allows viewer to view the activity that i have
+              posted. I will fetch the data from my blog-style application to
+              display it on this application.{" "}
             </p>
-            <div className="imageContainer"><img src={samplePic}></img></div>
+            <div className="imageContainer">
+              <img src={samplePic}></img>
+            </div>
           </div>
         </div>
       )}

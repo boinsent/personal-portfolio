@@ -95,6 +95,7 @@ ul{
     align-items: center;
     display: grid;
     padding: 10px 0 10px 0;
+    text-align: center;
 }
 .postContainer{
     margin-top: 20px;
@@ -115,12 +116,43 @@ ul{
 .postContainer p{
     width: 100%;
 }
-.imageContainer{
+.imageContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; 
-}
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .imageContainer img {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .slider-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .slider-button:first-of-type {
+    left: 10px;
+  }
+  
+  .slider-button:last-of-type {
+    right: 10px;
+  }
+  
 .postContainer button{
     border-radius: 50px;
     width: 60px;
